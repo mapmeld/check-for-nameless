@@ -1,0 +1,26 @@
+{
+  "name": "check-for-nameless",
+  "version": "1.0.0",
+  "description": "Check for nameless places in OpenStreetMap, using the Overpass API",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mapmeld/check-for-nameless.git"
+  },
+  "keywords": [
+    "OpenStreetMap",
+    "overpass"
+  ],
+  "author": "Nick Doiron <ndoiron@mapmeld.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mapmeld/check-for-nameless/issues"
+  },
+  "homepage": "https://github.com/mapmeld/check-for-nameless#readme",
+  "dependencies": {
+    "request": "^2.74.0"
+  }
+}
