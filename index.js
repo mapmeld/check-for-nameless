@@ -9,6 +9,15 @@ function checkForNameless(options, callback) {
   // set default options
   options.targetLang = options.targetLang || 'en';
   options.overpass = options.overpass || 'http://overpass-api.de/api/interpreter?data=';
+  
+  function lngCorrection(lng) {
+    while (lng > 180) {
+      lng -= 360;
+    }
+    while (lng < -180) {
+      lng += 360;
+    }
+  }
 
   var query =
     "node \
@@ -20,8 +29,8 @@ function checkForNameless(options, callback) {
     out;";
   query = query.replace('NORTH', options.north);
   query = query.replace('SOUTH', options.south);
-  query = query.replace('EAST', options.east);
-  query = query.replace('WEST', options.west);
+  query = query.replace('EAST', lngCorrection(options.east));
+  query = query.replace('WEST', lngCorrection(options.west));
   query = query.replace('TARGETLANG', options.targetLang);
 
   request(options.overpass + query.replace(/\s+/g, ''), (err, resp, body) => {
