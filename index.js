@@ -17,6 +17,7 @@ function checkForNameless(options, callback) {
     while (lng < -180) {
       lng += 360;
     }
+    return lng;
   }
 
   var query =
