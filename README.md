@@ -1,5 +1,7 @@
 # check-for-nameless
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/mapmeld/check-for-nameless.svg)](https://greenkeeper.io/)
+
 Node module that works with the OpenStreetMap Overpass API
 
 Send in a bounding box and receive an OSM XML response of nodes missing names
